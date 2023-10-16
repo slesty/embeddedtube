@@ -1,6 +1,8 @@
 # embeddedtube
 Add's embeded player on youtube video replacing it.
 
+NOTICE: This only works if you have the black screen telling you to turn off adblocker inside the videoplayer.(After 3 warnings.)
+
 Instructions:
 
 1. Download and place the folder anywhere.
