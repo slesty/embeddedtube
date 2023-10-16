@@ -15,5 +15,5 @@ Instructions:
 
 Known issues: 
 1. Sometimes you have to refresh the tab.
-2. if you click on the side videos on the right it will load them under the video you are watching.(I know how to fix but not letting me make functions for some reason.)
+2. if you click on the side videos on the right it will load them under the video you are watching.(I know how to fix.)
 3. double audio when clicking on another video on the right sometimes.
