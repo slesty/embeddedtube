@@ -14,6 +14,6 @@ Instructions:
 
 
 Known issues: 
-1. Having to refresh the page almost every time.
-2. if you click on the side videos on the right it will load them on top of each other.(I know how to fix.)
+1. Having to refresh the page if you click on a new video.
+2. if you click on the side videos on the right it will load them on top of each other.
 3. Clicking the youtube Button(top right) does not stop the video.
