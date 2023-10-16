@@ -1,4 +1,4 @@
-# embededtube
+# embeddedtube
 Add's embeded player on youtube video replacing it.
 
 Instructions:
