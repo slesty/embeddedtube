@@ -1,6 +1,4 @@
-// Function to apply settings to the embedded player
 function applySettings(autoplay) {
-  // Get the dimensions of the original player
   const existingPlayer = document.querySelector("div#player");
   if (!existingPlayer) {
     return;
@@ -28,23 +26,20 @@ function applySettings(autoplay) {
   existingPlayer.replaceWith(embedPlayer);
 }
 
-function stopEmbeddedVideo() {
-  const embedPlayer = document.querySelector("iframe");
-  if (embedPlayer) {
-    const embedPlayerWindow = embedPlayer.contentWindow;
-    embedPlayerWindow.video.pause();
-  }
+function initObserver() {
+  const observer = new MutationObserver(() => {
+    applySettings(true);
+  });
+
+  observer.observe(document.querySelector('title'), { childList: true });
 }
 
 window.addEventListener("load", function() {
   applySettings(true);
+  initObserver();
 });
 
-document.addEventListener("click", function(event) {
-  const youtubeLogo = event.target.closest("#ytd-logo, #yt-icon, #yt-icon-button");
-  if (youtubeLogo) {
-    console.log("YouTube logo clicked");
-    stopEmbeddedVideo();
-  }
-});
+
+
+
 
