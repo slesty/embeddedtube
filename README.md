@@ -2,6 +2,7 @@
 Add's embedded player on youtube video replacing it.
 
 NOTICE: This only works if you have the black screen telling you to turn off adblocker inside the videoplayer.(After 3 warnings.)
+The youtube video player needs to be in normal mode not theater mode for this to work.
 
 Instructions:
 
