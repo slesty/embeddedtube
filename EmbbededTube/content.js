@@ -1,11 +1,19 @@
+let previousEmbedPlayer = null;
+let previousURL = window.location.href;
+
 function applySettings(autoplay) {
-  const existingPlayer = document.querySelector("div#player");
-  if (!existingPlayer) {
+  let playerToReplace = document.querySelector("div#player");
+
+  if (!playerToReplace && previousEmbedPlayer) {
+    playerToReplace = previousEmbedPlayer;
+  }
+
+  if (!playerToReplace) {
     return;
   }
 
-  const width = existingPlayer.clientWidth;
-  const height = existingPlayer.clientHeight;
+  const width = playerToReplace.clientWidth;
+  const height = playerToReplace.clientHeight;
 
   const videoId = window.location.search.match(/v=([^&]+)/);
   if (!videoId) {
@@ -23,21 +31,27 @@ function applySettings(autoplay) {
   embedPlayer.frameBorder = "0";
   embedPlayer.allowFullscreen = true;
 
-  existingPlayer.replaceWith(embedPlayer);
+  playerToReplace.replaceWith(embedPlayer);
+  previousEmbedPlayer = embedPlayer;
 }
 
-function initObserver() {
-  const observer = new MutationObserver(() => {
-    applySettings(true);
-  });
-
-  observer.observe(document.querySelector('title'), { childList: true });
-}
+setInterval(() => {
+  const currentURL = window.location.href;
+  if (currentURL !== previousURL && /v=([^&]+)/.test(currentURL)) {
+    setTimeout(() => {
+      applySettings(true);
+    }, 500); 
+    previousURL = currentURL;
+  }
+}, 1000); // Check every second
 
 window.addEventListener("load", function() {
   applySettings(true);
-  initObserver();
 });
+
+
+
+
 
 
 
