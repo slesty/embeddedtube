@@ -1,8 +1,13 @@
 # embeddedtube
 Add's embedded player on youtube video replacing it.
 
-NOTICE: This only works if you have the black screen telling you to turn off adblocker inside the videoplayer.(After 3 warnings.)
+UPDATED: 10/25/23
+
+NOTICE:
+
+This only works if you have the black screen telling you to turn off adblocker inside the videoplayer.(After 3 warnings.)
 The youtube video player needs to be in normal mode not theater mode for this to work.
+
 
 Instructions:
 
@@ -14,7 +19,8 @@ Instructions:
 6. select your folder from part 1.
 
 
-Known issues: 
-1. Having to refresh the page if you click on a new video.
-2. if you click on the side videos on the right it will load them on top of each other.
+Known issues:
+
 3. Clicking the youtube Button(top right) does not stop the video.
+4. Playlist do not work.
+5. Videos that creators choose not to display on other websites do not work.
